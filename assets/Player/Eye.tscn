@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_unshaded = true
+albedo_color = Color( 0, 0, 0, 1 )
+
+[node name="Eye" type="CSGCombiner"]
+
+[node name="CSGMesh2" type="CSGCylinder" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, -0.0376161, -0.12076 )
+radius = 0.25
+height = 0.25
+sides = 32
+material = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGCylinder" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, -0.0251017, -0.121733 )
+operation = 2
+radius = 0.2
+height = 0.304682
+sides = 32
+material = SubResource( 1 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0.128827, -0.142114 )
+operation = 2
+width = 0.5511
+height = 0.463157
+depth = 0.34619
+material = SubResource( 1 )
