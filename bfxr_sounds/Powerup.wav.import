@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Powerup.wav-8cd7c5831b66499dc8c4610e41112547.sample"
+
+[deps]
+
+source_file="res://bfxr_sounds/Powerup.wav"
+dest_files=[ "res://.import/Powerup.wav-8cd7c5831b66499dc8c4610e41112547.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
