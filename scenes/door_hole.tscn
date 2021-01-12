@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Player/Fabric031_1K_Normal.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/Player/Fabric025_1K_Color.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/box.obj" type="ArrayMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_world_triplanar = true
+albedo_color = Color( 0.298039, 0.764706, 0.458824, 1 )
+albedo_texture = ExtResource( 2 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 1 )
+uv1_scale = Vector3( 0.2, 0.2, 0.2 )
+uv1_triplanar = true
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_unshaded = true
+flags_fixed_size = true
+
+[node name="door_hole" type="CSGCombiner"]
+
+[node name="aa" type="CSGMesh" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+use_collision = true
+collision_layer = 3
+collision_mask = 2147483651
+mesh = ExtResource( 3 )
+material = SubResource( 1 )
+
+[node name="a" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.87285, 0, 0 )
+operation = 2
+use_collision = true
+collision_layer = 3
+collision_mask = 3
+width = 8.0
+height = 8.0
+depth = 8.0
+material = SubResource( 2 )
